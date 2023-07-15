@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      body {
+        overflow-x: hidden;
+        height: 200vh;
+      }
+      h1 {
+        text-align: center;
+        margin: 20px;
+      }
+      .imageGallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        width: 100vw;
+        place-items: center;
+        margin: 20px;
+      }
+      .imgSec {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        gap: 20px;
+      }
+      img {
+        width: 100%;
+      }
+      button {
+        background-color: #ea4c89;
+        border-radius: 8px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        height: 40px;
+        line-height: 20px;
+        list-style: none;
+        margin: 0;
+        outline: none;
+        padding: 10px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      button:hover {
+        background-color: #f082ac;
+      }
+      nav {
+        display: flex;
+        gap: 25px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <span>Home</span>
+      <span> <a href="savedimg.html"> Saved images </a></span>
+    </nav>
+    <h1>Image Gallery</h1>
+    <div class="imageGallery" id="showImg"></div>
+    <h1>Saved images</h1>
+    <div class="imageGallery" id="savedImgs"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
